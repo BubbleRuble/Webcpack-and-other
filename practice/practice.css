@@ -1,0 +1,100 @@
+.feedback-form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 14px;
+}
+
+.feedback-form input[type="text"],
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.feedback-form input[type="text"]:focus,
+.feedback-form textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 3px #4a90e2;
+}
+
+.feedback-form button {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #45a049;
+}
+
+
+
+
+
+
+
+body {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pallete {
+  display: grid;
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 12px;
+  padding: 0;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.color-card {
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 8px 2px 1px -1px rgba(0, 0, 0, 0.2),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.color-card.is-active {
+  transform: perspective(400px) rotateX(10deg);
+}
+
+.color-swatch {
+  height: 128px;
+  cursor: pointer;
+}
+
+.color-meta {
+  padding: 10px;
+  font-weight: 700;
+}
+
+.color-meta p {
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 0.1em;
+}
