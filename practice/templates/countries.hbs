@@ -1,0 +1,10 @@
+{{#each countries}}
+<div class='countries-card'>
+  <img src="{{flag}}" alt="Прапор {{country}}" width="100" />
+  <h1 class="country-title">{{country}}</h1>
+  <p>Столиця: {{capital}}</p>
+  <p>Валюта: {{currency}}</p>
+  <p>Офіційна мова: {{language}}</p>
+  <p>Населення: {{population}} осіб</p>
+</div>
+{{/each}}

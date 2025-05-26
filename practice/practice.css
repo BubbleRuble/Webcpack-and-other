@@ -98,3 +98,59 @@ body {
   margin-bottom: 0;
   letter-spacing: 0.1em;
 }
+
+
+.js-country-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.countries-card {
+  flex: 1 1 calc(25% - 20px); /* 4 елементи в ряд */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 24px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.countries-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.countries-card img {
+  width: 240px;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.country-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 12px 0;
+  color: #222;
+}
+
+.countries-card p {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+
+.countries-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+

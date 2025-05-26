@@ -1,0 +1,66 @@
+[
+  {
+    "country": "Germany",
+    "capital": "Berlin",
+    "currency": "Euro",
+    "language": "German",
+    "population": 83000000,
+    "flag": "https://flagcdn.com/w320/de.png"
+  },
+  {
+    "country": "France",
+    "capital": "Paris",
+    "currency": "Euro",
+    "language": "French",
+    "population": 67000000,
+    "flag": "https://flagcdn.com/w320/fr.png"
+  },
+  {
+    "country": "Italy",
+    "capital": "Rome",
+    "currency": "Euro",
+    "language": "Italian",
+    "population": 59000000,
+    "flag": "https://flagcdn.com/w320/it.png"
+  },
+  {
+    "country": "Spain",
+    "capital": "Madrid",
+    "currency": "Euro",
+    "language": "Spanish",
+    "population": 47000000,
+    "flag": "https://flagcdn.com/w320/es.png"
+  },
+  {
+    "country": "Poland",
+    "capital": "Warsaw",
+    "currency": "Polish złoty",
+    "language": "Polish",
+    "population": 38000000,
+    "flag": "https://flagcdn.com/w320/pl.png"
+  },
+  {
+    "country": "Sweden",
+    "capital": "Stockholm",
+    "currency": "Swedish krona",
+    "language": "Swedish",
+    "population": 10000000,
+    "flag": "https://flagcdn.com/w320/se.png"
+  },
+  {
+    "country": "Ukraine",
+    "capital": "Kyiv",
+    "currency": "Ukrainian hryvnia",
+    "language": "Ukrainian",
+    "population": 41000000,
+    "flag": "https://flagcdn.com/w320/ua.png"
+  },
+  {
+    "country": "Greece",
+    "capital": "Athens",
+    "currency": "Euro",
+    "language": "Greek",
+    "population": 10400000,
+    "flag": "https://flagcdn.com/w320/gr.png"
+  }
+]
