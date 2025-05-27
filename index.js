@@ -4,6 +4,8 @@ import colorCards from './practice/templates/color-cards.hbs'
 import countries from './practice/templates/countries.json'
 import countriesTpl from './practice/templates/countries.hbs'
 import timeout from './practice/01-timeout.js'
+import notification from './practice/notification.js'
+import date from './practice/date.js'
 
 // console.log((countriesTpl(countries)))
 
@@ -60,5 +62,10 @@ import timeout from './practice/01-timeout.js'
 // function addActiveCardClass (card) {
 //   card.classList.add('is-active');
 // }
+
+
+
+
+
 
 
