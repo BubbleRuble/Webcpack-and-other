@@ -6,6 +6,8 @@ import countriesTpl from './practice/templates/countries.hbs'
 import timeout from './practice/01-timeout.js'
 import notification from './practice/notification.js'
 import date from './practice/date.js'
+import timer from './src/css/timer.css'
+import promise from './practice/promise.js'
 
 // console.log((countriesTpl(countries)))
 

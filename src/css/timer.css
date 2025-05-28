@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.timer {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.clockface {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.timer-btn {
+  width: 100px;
+  height: 60px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0aa7f7 ;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.timer-btn:hover {
+  background-color: #f72e0a  ;
+  transform: scale(1.05);
+}
+
+/* .timer-btn[data-action="start"]::before {
+  content: '▶';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+/* .timer-btn[data-action="stop"]::before {
+  content: '⏹';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+} */
