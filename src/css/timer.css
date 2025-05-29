@@ -49,18 +49,4 @@ body {
   transform: scale(1.05);
 }
 
-/* .timer-btn[data-action="start"]::before {
-  content: '▶';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-} */
 
-/* .timer-btn[data-action="stop"]::before {
-  content: '⏹';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-} */

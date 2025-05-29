@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap');
+
+body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ecf0f1;
+  font-family: 'Roboto', sans-serif;
+  padding: 40px;
+  line-height: 1.6;
+}
+
+button.js-race-btn {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(255, 75, 43, 0.3);
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+button.js-race-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(255, 75, 43, 0.5);
+}
+
+hr {
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 30px 0;
+}
+
+.js-winner {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f1c40f;
+  text-shadow: 0 0 10px #f39c12;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.js-progress {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #bdc3c7;
+  margin-bottom: 20px;
+}
+
+
+table.js-results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+table.js-results-table th,
+table.js-results-table td {
+  padding: 15px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+table.js-results-table th {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+table.js-results-table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+table.js-results-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+table.js-results-table tbody tr {
+  animation: fadeInRow 0.5s ease-in;
+}
+
+@keyframes fadeInRow {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -8,6 +8,8 @@ import notification from './practice/notification.js'
 import date from './practice/date.js'
 import timer from './src/css/timer.css'
 import promise from './practice/promise.js'
+import racetrack from './practice/racetrack.js'
+import racetrackCSS from './src/css/racetrack.css'
 
 // console.log((countriesTpl(countries)))
 
