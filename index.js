@@ -1,15 +1,18 @@
-import './practice/practice.css'
-import colors from './practice/templates/colors.json'
-import colorCards from './practice/templates/color-cards.hbs'
-import countries from './practice/templates/countries.json'
-import countriesTpl from './practice/templates/countries.hbs'
-import timeout from './practice/01-timeout.js'
-import notification from './practice/notification.js'
-import date from './practice/date.js'
-import timer from './src/css/timer.css'
-import promise from './practice/promise.js'
-import racetrack from './practice/racetrack.js'
-import racetrackCSS from './src/css/racetrack.css'
+import './practice/practice.css';
+import colors from './practice/templates/colors.json';
+import colorCards from './practice/templates/color-cards.hbs';
+import countries from './practice/templates/countries.json';
+import countriesTpl from './practice/templates/countries.hbs';
+import timeout from './practice/01-timeout.js';
+import notification from './practice/notification.js';
+import date from './practice/date.js';
+import timer from './src/css/timer.css';
+import promise from './practice/promise.js';
+import racetrack from './practice/racetrack.js';
+import racetrackCSS from './src/css/racetrack.css';
+import fetchApi from './practice/fetch-api.js';
+import pokemonCardTpl from './practice/templates/pokemon-card.hbs';
+import { create } from 'handlebars';
 
 // console.log((countriesTpl(countries)))
 
@@ -23,7 +26,6 @@ import racetrackCSS from './src/css/racetrack.css'
 // }
 
 // console.log(colorCards(colors))
-
 
 // const palleteContainer = document.querySelector('.js-pallete');
 // const cardsMarkup = createColorCardsMarkup(colors);
@@ -67,9 +69,42 @@ import racetrackCSS from './src/css/racetrack.css'
 //   card.classList.add('is-active');
 // }
 
+const refs = {
+  cardContainer: document.querySelector('.js-card-container'),
+  searchForm: document.querySelector('.js-search-form'),
+};
+
+refs.searchForm.addEventListener('submit', onSearch);
+
+function onSearch(e) {
+  e.preventDefault();
+
+  const form = e.currentTarget;
+  const searchQuery = form.elements.query.value;
+  
+
+  fetchPokemon(searchQuery)
+    .then(renderPokemonCard)
+    .catch(onFetchError)
+    .finally(() => form.reset())
+}
+
+function fetchPokemon(pokemonId) {
+  return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`).then(
+    responce => {
+      return responce.json();
+    },
+  );
+}
+
+function renderPokemonCard(pokemon) {
+  const markup = pokemonCardTpl(pokemon);
+  refs.cardContainer.innerHTML = markup;
+}
+
+function onFetchError (error) {
+  alert('Oops, something went wrong');
+}
 
 
-
-
-
-
+fetch('https://pokeapi.co/api/v2/pokemon?limit=25').then(d => d.json()).then(console.log)
