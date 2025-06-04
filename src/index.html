@@ -41,7 +41,9 @@
 </table> -->
 
 
-<div class="js-card-container"></div>
+<!-- FETCH_API-->
+
+<!-- <div class="js-card-container"></div>
 
 <form class="form-inline search-form js-search-form">
   <div class="form-group">
@@ -49,7 +51,22 @@
   </div>
 
   <button type="submit" class="btn btn-primary">Search</button>
-</form>
+</form> -->
+
+<form class="form-inline search-form js-search-form">
+  <div class="form-group">
+    <input type="text" class="form-control" name="query" placeholder="Що шукаємо?" autocomplete="off">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Search</button>
+
+</form> 
+
+<ul class="articles js-articles-container"></ul>
+
+<div class="show-more-wrapper">
+  <button type="button" data-action="load-more">Показати ще</button>
+</div>
   
   <!-- <script src="./build/my-bundle.js"></script> -->
 </body>

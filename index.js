@@ -1,18 +1,21 @@
-import './practice/practice.css';
-import colors from './practice/templates/colors.json';
-import colorCards from './practice/templates/color-cards.hbs';
-import countries from './practice/templates/countries.json';
-import countriesTpl from './practice/templates/countries.hbs';
-import timeout from './practice/01-timeout.js';
-import notification from './practice/notification.js';
-import date from './practice/date.js';
-import timer from './src/css/timer.css';
-import promise from './practice/promise.js';
-import racetrack from './practice/racetrack.js';
-import racetrackCSS from './src/css/racetrack.css';
-import fetchApi from './practice/fetch-api.js';
-import pokemonCardTpl from './practice/templates/pokemon-card.hbs';
-import { create } from 'handlebars';
+// import './practice/practice.css';
+// import colors from './practice/templates/colors.json';
+// import colorCards from './practice/templates/color-cards.hbs';
+// import countries from './practice/templates/countries.json';
+// import countriesTpl from './practice/templates/countries.hbs';
+// import timeout from './practice/01-timeout.js';
+// import notification from './practice/notification.js';
+// import date from './practice/date.js';
+// import timer from './src/css/timer.css';
+// import promise from './practice/promise.js';
+// import racetrack from './practice/racetrack.js';
+// import racetrackCSS from './src/css/racetrack.css';
+// import fetchApi from './practice/fetch-api.js';
+// import pokemonCardTpl from './practice/templates/pokemon-card.hbs';
+// import { create } from 'handlebars';
+import fetchapi from './src/css/fetch-api.css';
+import NewsApiService from './practice/news-service';
+import articlesTpl from './practice/templates/articles.hbs'
 
 // console.log((countriesTpl(countries)))
 
@@ -70,41 +73,34 @@ import { create } from 'handlebars';
 // }
 
 const refs = {
-  cardContainer: document.querySelector('.js-card-container'),
   searchForm: document.querySelector('.js-search-form'),
+  articlesContainer: document.querySelector('.js-articles-container'),
+  loadMorebtn: document.querySelector('[data-action="load-more"]'),
 };
 
+const newsApiService = new NewsApiService();
+
 refs.searchForm.addEventListener('submit', onSearch);
+refs.loadMorebtn.addEventListener('click', onLoadMore);
 
 function onSearch(e) {
   e.preventDefault();
 
-  const form = e.currentTarget;
-  const searchQuery = form.elements.query.value;
-  
-
-  fetchPokemon(searchQuery)
-    .then(renderPokemonCard)
-    .catch(onFetchError)
-    .finally(() => form.reset())
+  clearArticlesContainer()
+  newsApiService.query = e.currentTarget.elements.query.value;
+  newsApiService.resetPage();
+  newsApiService.fetchArticles().then(appendArticlesMarkup);
 }
 
-function fetchPokemon(pokemonId) {
-  return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`).then(
-    responce => {
-      return responce.json();
-    },
-  );
+function onLoadMore() {
+  newsApiService.fetchArticles().then(appendArticlesMarkup);
 }
 
-function renderPokemonCard(pokemon) {
-  const markup = pokemonCardTpl(pokemon);
-  refs.cardContainer.innerHTML = markup;
+function appendArticlesMarkup (articles) {
+  refs.articlesContainer.insertAdjacentHTML('beforeend', articlesTpl(articles))
 }
 
-function onFetchError (error) {
-  alert('Oops, something went wrong');
+function clearArticlesContainer () {
+  refs.articlesContainer.innerHTML = ''
 }
 
-
-fetch('https://pokeapi.co/api/v2/pokemon?limit=25').then(d => d.json()).then(console.log)
