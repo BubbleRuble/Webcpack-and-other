@@ -64,3 +64,13 @@ a {
   text-decoration: none;
   color:black;
 }
+
+a:hover {
+  color:blue
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+

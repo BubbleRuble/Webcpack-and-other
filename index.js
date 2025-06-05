@@ -13,9 +13,14 @@
 // import fetchApi from './practice/fetch-api.js';
 // import pokemonCardTpl from './practice/templates/pokemon-card.hbs';
 // import { create } from 'handlebars';
-import fetchapi from './src/css/fetch-api.css';
-import NewsApiService from './practice/news-service';
-import articlesTpl from './practice/templates/articles.hbs'
+// import fetchapi from './src/css/fetch-api.css';
+// import NewsApiService from './practice/news-service';
+// import articlesTpl from './practice/templates/articles.hbs';
+import c from './practice/CRUD/c.js'
+// import r from './practice/CRUD/r.js'
+import u from './practice/CRUD/u.js'
+import d from './practice/CRUD/d.js'
+
 
 // console.log((countriesTpl(countries)))
 
@@ -71,36 +76,3 @@ import articlesTpl from './practice/templates/articles.hbs'
 // function addActiveCardClass (card) {
 //   card.classList.add('is-active');
 // }
-
-const refs = {
-  searchForm: document.querySelector('.js-search-form'),
-  articlesContainer: document.querySelector('.js-articles-container'),
-  loadMorebtn: document.querySelector('[data-action="load-more"]'),
-};
-
-const newsApiService = new NewsApiService();
-
-refs.searchForm.addEventListener('submit', onSearch);
-refs.loadMorebtn.addEventListener('click', onLoadMore);
-
-function onSearch(e) {
-  e.preventDefault();
-
-  clearArticlesContainer()
-  newsApiService.query = e.currentTarget.elements.query.value;
-  newsApiService.resetPage();
-  newsApiService.fetchArticles().then(appendArticlesMarkup);
-}
-
-function onLoadMore() {
-  newsApiService.fetchArticles().then(appendArticlesMarkup);
-}
-
-function appendArticlesMarkup (articles) {
-  refs.articlesContainer.insertAdjacentHTML('beforeend', articlesTpl(articles))
-}
-
-function clearArticlesContainer () {
-  refs.articlesContainer.innerHTML = ''
-}
-
