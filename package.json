@@ -6,7 +6,7 @@
   "scripts": {
     "prod": "webpack --mode=production",
     "dev": "webpack-dev-server --mode=development",
-    "server": "json-server --watch db.json -d 300"
+    "server": "json-server --watch db.json"
   },
   "repository": {
     "type": "git",

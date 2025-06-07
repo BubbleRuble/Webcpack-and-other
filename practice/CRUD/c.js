@@ -1,7 +1,5 @@
 const BASE_URL = 'http://localhost:3000';
 
-const container = document.querySelector('.anton')
-
 function addFootballer(footballer) {
   const options = {
   method: 'POST',

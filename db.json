@@ -46,45 +46,17 @@
       "position": "striker"
     },
     {
-      "id": "96ef",
-      "name": "Kane",
-      "age": 32,
-      "number": 9,
-      "position": "striker"
-    },
-    {
       "id": "695b",
       "name": "Kane",
-      "age": 32,
-      "number": 9,
-      "position": "striker"
-    },
-    {
-      "id": "2ba7",
-      "name": "Kane",
-      "age": 32,
-      "number": 9,
-      "position": "striker"
-    },
-    {
-      "id": "2116",
-      "name": "Kane",
-      "age": 32,
-      "number": 9,
-      "position": "striker"
-    },
-    {
-      "id": "2b34",
-      "name": "Kane",
-      "age": 32,
+      "age": 33,
       "number": 9,
       "position": "striker"
     },
     {
       "id": "b4bc",
       "name": "Kane",
-      "age": 32,
-      "number": 9,
+      "age": 1000,
+      "number": 1000,
       "position": "striker"
     }
   ]

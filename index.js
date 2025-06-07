@@ -14,12 +14,14 @@
 // import pokemonCardTpl from './practice/templates/pokemon-card.hbs';
 // import { create } from 'handlebars';
 // import fetchapi from './src/css/fetch-api.css';
-// import NewsApiService from './practice/news-service';
+// import NewsApiService from './practice/news-service.js';
 // import articlesTpl from './practice/templates/articles.hbs';
-import c from './practice/CRUD/c.js'
+// import c from './practice/CRUD/c.js'
 // import r from './practice/CRUD/r.js'
-import u from './practice/CRUD/u.js'
-import d from './practice/CRUD/d.js'
+// import u from './practice/CRUD/u.js'
+// import d from './practice/CRUD/d.js'
+// import async from './practice/async-await.js'
+import asyncCrud from './practice/CRUD/async-crud.js'
 
 
 // console.log((countriesTpl(countries)))
